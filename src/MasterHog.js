@@ -8,15 +8,21 @@ export default class MasterHog extends Component {
   constructor() {
     super()
     this.state = {
-      eyeColor: "blue",
+      eyeColor: "normal",
+      // image: normalBaby
     }
   }
+
+
+
 
 
   changeEyeColor = (e) => {
     this.setState({
       eyeColor: e.target.value
     })
+
+
   }
 
 
@@ -40,9 +46,9 @@ export default class MasterHog extends Component {
         </div>
         
         <ul className="hoglist">
-          <BabyHog />
-          <BabyHog />
-          <BabyHog />
+          <BabyHog eyeColor={this.state.eyeColor} />
+          <BabyHog eyeColor={this.state.eyeColor}/>
+          <BabyHog eyeColor={this.state.eyeColor}/>
         </ul>
 
       </div>
